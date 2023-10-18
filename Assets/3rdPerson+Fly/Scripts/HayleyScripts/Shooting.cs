@@ -31,7 +31,7 @@ public class Shooting : MonoBehaviour
     {
         shootTimer -= Time.deltaTime;
 
-        if (shootTimer <= 0 && Input.GetKey(KeyCode.Space))
+        if (shootTimer <= 0 && Input.GetKey(KeyCode.Mouse0))
         {
             shootTimer = shootInterval;
             ShootBullet();
