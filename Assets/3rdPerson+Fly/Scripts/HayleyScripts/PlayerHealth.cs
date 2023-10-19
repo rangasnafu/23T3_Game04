@@ -15,6 +15,7 @@ public class PlayerHealth : MonoBehaviour
     {
         currentHealth = maxHealth;
         healthBar.SetMaxHealht(maxHealth);
+        Time.timeScale = 1f;
     }
 
     void Update()

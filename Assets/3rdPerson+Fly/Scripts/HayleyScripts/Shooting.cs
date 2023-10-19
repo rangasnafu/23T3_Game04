@@ -9,7 +9,7 @@ public class Shooting : MonoBehaviour
     public float shootInterval;
     private float shootTimer;
 
-    public AudioClip shootSound;
+    //public AudioClip shootSound;
     //private AudioSource audioSource;
 
 
