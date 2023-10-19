@@ -122,4 +122,14 @@ public class Enemy : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Force"))
+        {
+            Debug.Log("Enemy collided with Force");
+            Destroy(gameObject);
+
+        }
+    }
 }

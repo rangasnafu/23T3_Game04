@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class MoveForce : MonoBehaviour
 {
-    public Vector3 movementSpeed;
-    public Space space;
+    public float movementSpeed = 10f;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +16,7 @@ public class MoveForce : MonoBehaviour
     void Update()
     {
         //move the bullet 
-        transform.Translate(movementSpeed * Time.deltaTime, space);
+        transform.Translate(Vector3.forward * movementSpeed * Time.deltaTime, Space.Self);
 
 
     }

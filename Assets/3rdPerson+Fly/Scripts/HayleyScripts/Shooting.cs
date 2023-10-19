@@ -42,7 +42,7 @@ public class Shooting : MonoBehaviour
     private void ShootBullet()
     {
         //audioSource.PlayOneShot(shootSound);
-        Instantiate(bulletPrefab, bulletSpawnPoint.position, Quaternion.identity);
+        Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
         //instantiate means to spawn, quaternion means rotation
     }
 }
