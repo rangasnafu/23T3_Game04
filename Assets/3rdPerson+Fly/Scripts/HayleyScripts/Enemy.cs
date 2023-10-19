@@ -29,7 +29,7 @@ public class Enemy : MonoBehaviour
 
     private void Awake()
     {
-        player = GameObject.Find("PlayerObj").transform;
+        player = GameObject.Find("shadow").transform;
         agent = GetComponent<NavMeshAgent>();
     }
 
@@ -110,6 +110,16 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        health -= damage;
 
+        if (health <= 0)
+        {
+            Invoke(nameof(DestroyEnemy), .5f);
+        }
+    }
+
+    private void DestroyEnemy()
+    {
+        Destroy(gameObject);
     }
 }
