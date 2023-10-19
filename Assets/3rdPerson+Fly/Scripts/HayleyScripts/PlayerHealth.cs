@@ -9,19 +9,22 @@ public class PlayerHealth : MonoBehaviour
 
     public HealthBar healthBar;
 
+    public GameObject gameOverUI;
+
     void Start()
     {
         currentHealth = maxHealth;
         healthBar.SetMaxHealht(maxHealth);
     }
 
-    //void Update()
-    //{
-    //    if ()
-     //   {
-    //        TakeDamage(1);
-    //    }
-    //}
+    void Update()
+    {
+        if (currentHealth <= 0)
+        {
+            gameOverUI.SetActive(true);
+            Time.timeScale = 0f;
+        }
+    }
 
     void TakeDamage(int damage)
     {
